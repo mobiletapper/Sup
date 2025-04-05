@@ -1,7 +1,8 @@
+getgenv().R6 = false
 
 
+if getgenv().R6 then
 
-if getgenv()['do you like black men?'].Visuals.Client.R6 then
 local plr = game:GetService("Players").LocalPlayer
 
 function RunCustomAnimation(Char)
