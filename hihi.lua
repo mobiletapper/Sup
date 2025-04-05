@@ -933,5 +933,5 @@ plr.CharacterAdded:Connect(function(Char)
 	RunCustomAnimation(Char)
 end)
 end
-
+getgenv().R6 = getgenv()['do you like black men?'].Visuals.Client.R6
 return R6
