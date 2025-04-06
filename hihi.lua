@@ -4,7 +4,7 @@ while not plr do
     task.wait()
     plr = Players.LocalPlayer
 end
-
+local Char = plr.Character
 local AnimationController = {}
 
 
