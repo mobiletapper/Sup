@@ -1,7 +1,6 @@
 getgenv().R6 = false
 
 
-if getgenv().R6 then
 
 local plr = game:GetService("Players").LocalPlayer
 
