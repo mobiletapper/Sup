@@ -955,7 +955,6 @@ end
 			stepAnimate(currentGameTime)
 		end
 	end)
-end
 
 if plr.Character then
     RunCustomAnimation(plr.Character)
