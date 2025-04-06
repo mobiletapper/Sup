@@ -935,4 +935,31 @@ plr.CharacterAdded:Connect(function(Char)
 end)
 end
 
-return R6
+local function HandleR6State()
+    if getgenv().R6 then
+        if plr.Character then
+            RunCustomAnimation(plr.Character)
+        end
+        plr.CharacterAdded:Connect(function(Char)
+            RunCustomAnimation(Char)
+        end)
+    else
+        if plr.Character and plr.Character:FindFirstChild("Animate") then
+            plr.Character.Animate.Disabled = false
+        end
+    end
+end
+
+
+HandleR6State()
+
+
+while true do
+    local currentState = getgenv().R6
+    repeat
+        task.wait(0.1)
+    until getgenv().R6 ~= currentState
+    HandleR6State()
+end
+
+return getgenv().R6
