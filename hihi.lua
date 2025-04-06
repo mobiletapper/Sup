@@ -23,25 +23,10 @@ end
 local function RunCustomAnimation(Char)
     if not active then return end
 
-    local Humanoid = Char:FindFirstChildOfClass("Humanoid")
-    if not Humanoid then return end
-
     if Char:FindFirstChild("Animate") then
         Char.Animate.Disabled = true
     end
 
-    table.insert(connections, Humanoid.Died:Connect(onDied))
-    table.insert(connections, Humanoid.Running:Connect(onRunning))
-    table.insert(connections, Humanoid.Jumping:Connect(onJumping))
-    table.insert(connections, Humanoid.Climbing:Connect(onClimbing))
-    table.insert(connections, Humanoid.GettingUp:Connect(onGettingUp))
-    table.insert(connections, Humanoid.FreeFalling:Connect(onFreeFall))
-    table.insert(connections, Humanoid.FallingDown:Connect(onFallingDown))
-    table.insert(connections, Humanoid.Seated:Connect(onSeated))
-    table.insert(connections, Humanoid.PlatformStanding:Connect(onPlatformStanding))
-    table.insert(connections, Humanoid.Swimming:Connect(onSwimming))
-    table.insert(connections, game:GetService("Players").LocalPlayer.Chatted:Connect(function(msg)
-    end))
 end
 
 
