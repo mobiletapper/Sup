@@ -1,5 +1,10 @@
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+while not plr do
+    task.wait()
+    plr = Players.LocalPlayer
+end
 
-local plr = game:GetService("Players").LocalPlayer
 local AnimationController = {}
 
 
